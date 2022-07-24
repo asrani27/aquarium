@@ -11,7 +11,7 @@
  Target Server Version : 50724
  File Encoding         : 65001
 
- Date: 23/07/2022 22:05:23
+ Date: 24/07/2022 18:36:55
 */
 
 SET NAMES utf8mb4;
@@ -44,15 +44,15 @@ CREATE TABLE `home`  (
   `suhu` int(255) NULL DEFAULT NULL,
   `tinggi_air` int(255) NULL DEFAULT NULL,
   `kipas` int(255) NULL DEFAULT NULL,
-  `lampu` int(255) NULL DEFAULT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL,
   PRIMARY KEY (`id`) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 1 CHARACTER SET = latin1 COLLATE = latin1_swedish_ci ROW_FORMAT = Dynamic;
+) ENGINE = InnoDB AUTO_INCREMENT = 2 CHARACTER SET = latin1 COLLATE = latin1_swedish_ci ROW_FORMAT = Dynamic;
 
 -- ----------------------------
 -- Records of home
 -- ----------------------------
+INSERT INTO `home` VALUES (1, 26, 71, 1, NULL, NULL);
 
 -- ----------------------------
 -- Table structure for lampu
@@ -73,7 +73,7 @@ CREATE TABLE `lampu`  (
 -- ----------------------------
 -- Records of lampu
 -- ----------------------------
-INSERT INTO `lampu` VALUES (2, '21:18:00', '22:18:00', '01:18:00', '02:18:00', 1, '2022-07-23 13:18:09', '2022-07-23 13:21:42');
+INSERT INTO `lampu` VALUES (2, '19:18:00', '22:18:00', '01:18:00', '18:38:00', 1, '2022-07-23 13:18:09', '2022-07-23 13:21:42');
 
 -- ----------------------------
 -- Table structure for pakan
@@ -123,7 +123,7 @@ CREATE TABLE `roles`  (
   `created_at` timestamp NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
   `updated_at` timestamp NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
   PRIMARY KEY (`id`) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 4 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_general_ci ROW_FORMAT = DYNAMIC;
+) ENGINE = InnoDB AUTO_INCREMENT = 2 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_general_ci ROW_FORMAT = DYNAMIC;
 
 -- ----------------------------
 -- Records of roles
@@ -144,7 +144,7 @@ CREATE TABLE `tentang`  (
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL,
   PRIMARY KEY (`id`) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 4 CHARACTER SET = latin1 COLLATE = latin1_swedish_ci ROW_FORMAT = Dynamic;
+) ENGINE = InnoDB AUTO_INCREMENT = 3 CHARACTER SET = latin1 COLLATE = latin1_swedish_ci ROW_FORMAT = Dynamic;
 
 -- ----------------------------
 -- Records of tentang
@@ -170,7 +170,7 @@ CREATE TABLE `users`  (
   PRIMARY KEY (`id`) USING BTREE,
   UNIQUE INDEX `users_username_unique`(`username`) USING BTREE,
   UNIQUE INDEX `users_email_unique`(`email`) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 5 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_general_ci ROW_FORMAT = DYNAMIC;
+) ENGINE = InnoDB AUTO_INCREMENT = 2 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_general_ci ROW_FORMAT = DYNAMIC;
 
 -- ----------------------------
 -- Records of users
