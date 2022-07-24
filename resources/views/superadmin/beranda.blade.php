@@ -27,9 +27,9 @@
         <!-- small card -->
         <div class="small-box bg-info">
             <div class="inner">
-                <h3>27<sup style="font-size: 20px">O</sup> C</h3>
+                <h3>{{$suhu}}<sup style="font-size: 20px">O</sup> C</h3>
 
-                <p>TEMPERATUR SUHU (NORMAL)</p>
+                <p>TEMPERATUR SUHU</p>
             </div>
             <div class="icon">
                 <i class="fas fa-water"></i>
@@ -40,9 +40,9 @@
         <!-- small card -->
         <div class="small-box bg-success">
             <div class="inner">
-                <h3>70%</h3>
+                <h3>{{$tinggi}}%</h3>
 
-                <p>KETINGGIAN AIR (CUKUP)</p>
+                <p>KETINGGIAN AIR</p>
             </div>
             <div class="icon">
                 <i class="fas fa-water"></i>
@@ -57,7 +57,7 @@
 
             <div class="info-box-content">
                 <span class="info-box-text">KIPAS</span>
-                <span class="info-box-number">NYALA</span>
+                <span class="info-box-number">{{$kipas == 0 ? 'MATI' : 'NYALA'}}</span>
             </div>
             <!-- /.info-box-content -->
         </div>
@@ -69,7 +69,7 @@
 
             <div class="info-box-content">
                 <span class="info-box-text">LAMPU</span>
-                <span class="info-box-number">MATI</span>
+                <span class="info-box-number">{{$lampu}}</span>
             </div>
             <!-- /.info-box-content -->
         </div>
@@ -89,7 +89,8 @@
                             <div class="input-group-prepend">
                                 <span class="input-group-text"><i class="far fa-clock"></i></span>
                             </div>
-                            <input type="text" class="form-control float-right" id="reservationtime" value="08:00">
+                            <input type="text" class="form-control float-right" id="reservationtime"
+                                value="{{$pakan->food1}}">
                         </div>
                     </div>
                     <div class="col-4">
@@ -97,7 +98,8 @@
                             <div class="input-group-prepend">
                                 <span class="input-group-text"><i class="far fa-clock"></i></span>
                             </div>
-                            <input type="text" class="form-control float-right" id="reservationtime" value="12:00">
+                            <input type="text" class="form-control float-right" id="reservationtime"
+                                value="{{$pakan->food2}}">
                         </div>
                     </div>
                     <div class="col-4">
@@ -105,7 +107,8 @@
                             <div class="input-group-prepend">
                                 <span class="input-group-text"><i class="far fa-clock"></i></span>
                             </div>
-                            <input type="text" class="form-control float-right" id="reservationtime" value="18:00">
+                            <input type="text" class="form-control float-right" id="reservationtime"
+                                value="{{$pakan->food3}}">
                         </div>
                     </div>
                 </div>
