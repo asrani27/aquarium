@@ -27,7 +27,7 @@ EDIT JADWAL LAMPU
                                 <label class="col-sm-2 col-form-label">Lighting 1 Time</label>
                                 <div class="col-sm-2">
                                     <input type="time" class="form-control" name="light1_start"
-                                        value="{{$data->light1_start}}" required>
+                                        value="{{$data->light1_start}}" required min="00:00" max="23:59">
                                 </div>
                                 <label class="col-sm-1 col-form-label">Sampai</label>
                                 <div class="col-sm-2">
