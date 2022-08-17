@@ -26,14 +26,14 @@
                 </p>
             </a>
         </li>
-        <li class="nav-item">
+        {{-- <li class="nav-item">
             <a href="/galeri" class="nav-link {{Request::is('galeri*') ? 'active' : ''}}">
                 <i class="nav-icon fa fa-image"></i>
                 <p>
                     GALERI
                 </p>
             </a>
-        </li>
+        </li> --}}
         <li class="nav-item">
             <a href="/tentang" class="nav-link {{Request::is('tentang*') ? 'active' : ''}}">
                 <i class="nav-icon fa fa-users"></i>

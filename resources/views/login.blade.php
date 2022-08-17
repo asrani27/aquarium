@@ -63,10 +63,10 @@ scratch. This page gets rid of all links and provides the needed markup only.
                         <div class="col-lg-4">
 
                             <div class="text-center text-white">
-                                <img src="" alt="" width="80px"><br />
+                                <img src="/admin/logoaq.JPG" alt="" width="130px"><br />
                                 <h1
                                     style="font-family:'monotype corsiva'; font-weight:bold;text-shadow: 2px 2px black;">
-                                    AQUARIUM CERDAS.</h1>
+                                    </h1>
                             </div>
                             <div class="card">
                                 <div class="card-body">

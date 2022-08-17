@@ -33,7 +33,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
           <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
         </li>
         <li class="nav-item">
-          <a href="#" class="nav-link text-white"><strong>AQUARIUM CERDAS</strong></a>
+          <a href="#" class="nav-link text-white"><strong>POLITEKNIK NEGERI BANJARMASIN</strong></a>
         </li>
       </ul>
       <ul class="navbar-nav ml-auto">
