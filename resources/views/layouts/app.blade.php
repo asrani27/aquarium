@@ -46,7 +46,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
       <a href="#" class="brand-link navbar-lightblue" style="
       background-color: #0954a9 !important;">
         <span class="brand-text font-weight-light text-white text-center">
-          AQUA
+          AKUARIUM CERDAS
         </span>
       </a>
       <div class="sidebar">
