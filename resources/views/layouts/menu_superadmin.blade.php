@@ -14,7 +14,7 @@
             <a href="/lampu" class="nav-link {{Request::is('lampu*') ? 'active' : ''}}">
                 <i class="nav-icon fa fa-calendar"></i>
                 <p>
-                    LAMPU AQUARIUM
+                    LAMPU AKUARIUM
                 </p>
             </a>
         </li>
