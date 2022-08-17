@@ -16,7 +16,7 @@
                 <div class="user-block">
                     <img class="img-circle" src="/admin/dist/img/avatar5.png" alt="User Image">
                     <span class="username"><a href="#">Hi, {{Auth::user()->name}}</a></span>
-                    <span class="description">SELAMAT DATANG DI APLIKASI AQUARIUM CERDAS</span>
+                    <span class="description">SELAMAT DATANG DI APLIKASI AKUARIUM CERDAS</span>
                 </div>
             </div>
         </div>
