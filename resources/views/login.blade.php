@@ -66,7 +66,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
                                 <img src="" alt="" width="80px"><br />
                                 <h1
                                     style="font-family:'monotype corsiva'; font-weight:bold;text-shadow: 2px 2px black;">
-                                    AQUARIUM CERDAS</h1>
+                                    AQUARIUM CERDAS.</h1>
                             </div>
                             <div class="card">
                                 <div class="card-body">
