@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use Carbon\Carbon;
 use App\Models\Home;
 use App\Models\Lampu;
 use Illuminate\Http\Request;
@@ -28,7 +29,19 @@ class ApiController extends Controller
 
     public function lampu()
     {
-        $data = Lampu::where('active', 1)->first();
+        $jam_lampu = Lampu::where('active', 1)->first();
+        $now = Carbon::now();
+        $start1 = Carbon::createFromTimeString($jam_lampu->light1_start);
+        $end1 = Carbon::createFromTimeString($jam_lampu->light1_end);
+
+        $start2 = Carbon::createFromTimeString($jam_lampu->light2_start);
+        $end2 = Carbon::createFromTimeString($jam_lampu->light2_end);
+        if ($now->between($start1, $end1) || $now->between($start2, $end2)) {
+            $lampu = 'NYALA';
+        } else {
+            $lampu = 'MATI';
+        }
+        $data = $lampu;
         return response()->json($data);
     }
 
