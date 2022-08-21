@@ -28,12 +28,12 @@ class ApiController extends Controller
     public function lampu()
     {
         $data = Lampu::where('active', 1)->get();
-        return response()->json($data);
+        return response()->json('sukses');
     }
 
     public function kipas()
     {
-        $data = Home::first()->kipas;
-        return response()->json($data);
+        $data = Home::first();
+        return response()->json('sukses');
     }
 }
