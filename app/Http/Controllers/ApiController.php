@@ -47,7 +47,7 @@ class ApiController extends Controller
 
     public function kipas()
     {
-        $data = Home::first()->kipas;
+        $data = Home::first()->kipas == 1 ? 'NYALA' : 'MATI';
         return response()->json($data);
     }
 }
