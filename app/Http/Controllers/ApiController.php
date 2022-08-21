@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Home;
+use App\Models\Lampu;
 use Illuminate\Http\Request;
 
 class ApiController extends Controller
@@ -27,13 +28,13 @@ class ApiController extends Controller
 
     public function lampu()
     {
-        $data = Lampu::where('active', 1)->get();
-        return response()->json('sukses');
+        $data = Lampu::where('active', 1)->first();
+        return response()->json($data);
     }
 
     public function kipas()
     {
-        $data = Home::first();
-        return response()->json('sukses');
+        $data = Home::first()->kipas;
+        return response()->json($data);
     }
 }
