@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Carbon\Carbon;
 use App\Models\Home;
 use App\Models\Lampu;
+use App\Models\Pakan;
 use Illuminate\Http\Request;
 
 class ApiController extends Controller
