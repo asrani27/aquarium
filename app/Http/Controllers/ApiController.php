@@ -38,9 +38,9 @@ class ApiController extends Controller
         $start2 = Carbon::createFromTimeString($jam_lampu->light2_start);
         $end2 = Carbon::createFromTimeString($jam_lampu->light2_end);
         if ($now->between($start1, $end1) || $now->between($start2, $end2)) {
-            $lampu = 'NYALA';
+            $lampu = 1;
         } else {
-            $lampu = 'MATI';
+            $lampu = 0;
         }
         $data = $lampu;
         return response()->json($data);
