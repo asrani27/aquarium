@@ -8,7 +8,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>AQUARIUM CERDAS</title>
+    <title>AKUARIUM CERDAS</title>
     <link rel="stylesheet"
         href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
     <link rel="stylesheet" href="/admin/plugins/fontawesome-free/css/all.min.css">
@@ -63,13 +63,18 @@ scratch. This page gets rid of all links and provides the needed markup only.
                         <div class="col-lg-4">
 
                             <div class="text-center text-white">
-                                <img src="/admin/logoaq.JPG" alt="" width="130px"><br />
                                 <h1
                                     style="font-family:'monotype corsiva'; font-weight:bold;text-shadow: 2px 2px black;">
                                     </h1>
                             </div>
                             <div class="card">
                                 <div class="card-body">
+                                    <div class="text-center">
+
+                                        <img src="/admin/logoaq.JPG" alt="" width="130px"><br />
+                                        <h1>Akuarium Cerdas</h1>
+                                        <br />
+                                    </div>
                                     <form action="/login" method="post">
                                         @csrf
                                         <div class="form-group">
@@ -113,7 +118,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
     <!-- Main Footer -->
     <footer class="main-footer text-center text-white"
         style="background: linear-gradient(90deg, #00d2ff 0%, #3a47d5 100%);">
-        <strong>Aquarium App V.1.0</strong>
+        <strong>Akuarium App V.1.0</strong>
     </footer>
     </div>
     <!-- ./wrapper -->
