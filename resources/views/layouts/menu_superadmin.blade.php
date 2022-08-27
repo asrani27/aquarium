@@ -18,14 +18,14 @@
                 </p>
             </a>
         </li>
-        <li class="nav-item">
+        {{-- <li class="nav-item">
             <a href="/pakan" class="nav-link {{Request::is('pakan*') ? 'active' : ''}}">
                 <i class="nav-icon fa fa-calendar"></i>
                 <p>
                     PAKAN IKAN
                 </p>
             </a>
-        </li>
+        </li> --}}
         {{-- <li class="nav-item">
             <a href="/galeri" class="nav-link {{Request::is('galeri*') ? 'active' : ''}}">
                 <i class="nav-icon fa fa-image"></i>
