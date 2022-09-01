@@ -33,17 +33,6 @@
                                     <input type="time" class="form-control" name="light1_end" required>
                                 </div>
                             </div>
-
-                            <div class="form-group row">
-                                <label class="col-sm-2 col-form-label">Lighting 2 Time</label>
-                                <div class="col-sm-2">
-                                    <input type="time" class="form-control" name="light2_start" required>
-                                </div>
-                                <label class="col-sm-1 col-form-label">Sampai</label>
-                                <div class="col-sm-2">
-                                    <input type="time" class="form-control" name="light2_end" required>
-                                </div>
-                            </div>
                             <div class="form-group row">
                                 <label class="col-sm-2 col-form-label"></label>
                                 <div class="col-sm-5">

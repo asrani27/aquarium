@@ -23,8 +23,7 @@
                     <thead>
                         <tr>
                             <th>No</th>
-                            <th>Lighting 1 Time</th>
-                            <th>Lighting 2 Time</th>
+                            <th>Lighting Time</th>
                             <th>Status</th>
                             <th>Aksi</th>
                         </tr>
@@ -37,7 +36,6 @@
                         <tr>
                             <td>{{$no++}}</td>
                             <td>{{$item->light1_start}} - {{$item->light1_end}}</td>
-                            <td>{{$item->light2_start}} - {{$item->light2_end}}</td>
                             <td>{{$item->active == 1 ? 'aktif':'non aktif'}}</td>
                             <td>
 
