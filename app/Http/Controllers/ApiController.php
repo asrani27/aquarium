@@ -51,18 +51,31 @@ class ApiController extends Controller
         $data = Home::first()->kipas == 1 ? 'NYALA' : 'MATI';
         return response()->json($data);
     }
+
+    public function kipasNyala()
+    {
+        $data = Home::first()->update(['kipas' => 1]);
+        return response()->json($data);
+    }
+
+    public function kipasMati()
+    {
+        $data = Home::first()->update(['kipas' => 0]);
+        return response()->json($data);
+    }
+
     public function pakan()
     {
         $jam = Carbon::now()->format('H:i:s');
         $pakan = Pakan::where('active', 1)->first();
 
-        if($jam == $pakan->food1){
+        if ($jam == $pakan->food1) {
             $data = 'on';
-        }elseif($jam == $pakan->food2){
+        } elseif ($jam == $pakan->food2) {
             $data = 'on';
-        }elseif($jam == $pakan->food3){
+        } elseif ($jam == $pakan->food3) {
             $data = 'on';
-        }else{
+        } else {
             $data = 'off';
         }
         return response()->json($data);
