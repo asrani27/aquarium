@@ -17,7 +17,6 @@ class BerandaController extends Controller
         $tinggi = Home::first() == null ? 0 : Home::first()->tinggi_air;
         $kipas = Home::first() == null ? 0 : Home::first()->kipas;
 
-
         $jam_lampu = Lampu::where('active', 1)->first();
         $now = Carbon::now();
         $start1 = Carbon::createFromTimeString($jam_lampu->light1_start);
