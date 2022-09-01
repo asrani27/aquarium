@@ -69,8 +69,8 @@ class LampuController extends Controller
         $attr = $req->all();
 
         $today = Carbon::now()->format('Y-m-d');
-        $startTime = Carbon::parse($today . ' ' . $req->light1_start . ':00');
-        $finishTime = Carbon::parse($today . ' ' . $req->light1_end . ':00');
+        $startTime = Carbon::parse($today . ' ' . $req->light1_start);
+        $finishTime = Carbon::parse($today . ' ' . $req->light1_end);
 
 
         if ($startTime > $finishTime) {
