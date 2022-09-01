@@ -39,16 +39,23 @@ class LampuController extends Controller
         $startTime = Carbon::parse($today . ' ' . $req->light1_start . ':00');
         $finishTime = Carbon::parse($today . ' ' . $req->light1_end . ':00');
 
-        $hours = $finishTime->diffInHours($startTime);
-        $minutes = $finishTime->diffInMinutes($startTime);
-        $seconds = $finishTime->diffInSeconds($startTime);
-        if($minutes > 480){
-            toastr()->error('tidak bisa lebih dari 8 jam / 480Menit');
+
+        if ($startTime > $finishTime) {
+            toastr()->error('jam mulai tidak boleh lebih dari jam selesai');
             return back();
-        }else{
-            Lampu::create($attr);
-            toastr()->success('Berhasil disimpan');
-            return redirect('/lampu');
+        } else {
+
+            $hours = $finishTime->diffInHours($startTime);
+            $minutes = $finishTime->diffInMinutes($startTime);
+            $seconds = $finishTime->diffInSeconds($startTime);
+            if ($minutes > 480) {
+                toastr()->error('tidak bisa lebih dari 8 jam / 480Menit');
+                return back();
+            } else {
+                Lampu::create($attr);
+                toastr()->success('Berhasil disimpan');
+                return redirect('/lampu');
+            }
         }
     }
     public function lampuedit($id)
@@ -58,10 +65,31 @@ class LampuController extends Controller
     }
     public function lampuupdate(Request $req, $id)
     {
+
         $attr = $req->all();
-        Lampu::find($id)->update($attr);
-        toastr()->success('Berhasil disimpan');
-        return redirect('/lampu');
+
+        $today = Carbon::now()->format('Y-m-d');
+        $startTime = Carbon::parse($today . ' ' . $req->light1_start . ':00');
+        $finishTime = Carbon::parse($today . ' ' . $req->light1_end . ':00');
+
+
+        if ($startTime > $finishTime) {
+            toastr()->error('jam mulai tidak boleh lebih dari jam selesai');
+            return back();
+        } else {
+
+            $hours = $finishTime->diffInHours($startTime);
+            $minutes = $finishTime->diffInMinutes($startTime);
+            $seconds = $finishTime->diffInSeconds($startTime);
+            if ($minutes > 480) {
+                toastr()->error('tidak bisa lebih dari 8 jam / 480Menit');
+                return back();
+            } else {
+                Lampu::find($id)->update($attr);
+                toastr()->success('Berhasil disimpan');
+                return redirect('/lampu');
+            }
+        }
     }
     public function lampudelete($id)
     {
